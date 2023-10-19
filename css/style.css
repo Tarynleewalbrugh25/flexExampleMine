@@ -6,22 +6,22 @@
     box-sizing: border-box;
 }
 :root {
-    --primary: pink;
-    --secondary:blue;
-    --awesome:purple;
+    --primary: black;
+    --secondary: rgb(255, 255, 255);
+    --awesome: hsl(135, 53%, 37%, .7);
 }
 .container {
-    margin-block: 10px;
+    margin-block: 20px;
     --numbOfRed: 123;
     --numbOfOrange: 100;
     --numbOfYellow: 18;
     border-width: 5px 8px;
-    border-image: radial-gradient(120deg, var(--numbOfRed), var(numbOfOrange), var(numbOfYellow));
+    border-image: radial-gradient(120deg, var(--numbOfRed), var(--numbOfOrange), var(--numbOfYellow));
 }
 .container :is(#example1,#example2),
 .button-wrapper {
     display: flex;
-    gap: .6rem;
+    gap: .10rem;
 }
 .container :is(#example2) {
     flex-flow: row wrap;
@@ -30,10 +30,17 @@
     display: grid;
     grid-template-rows: 20rem 1fr auto;
 }
+.item>img{
+    width: 20rem;
+    aspect-ratio: 1/1;
+}
+.button-wrapper {
+    justify-content: space-between;
+}
 .button-wrapper {
     border: 3px solid;
-    border-image: linear-gradient(black, var(--awesome)) 11 fill;
-}
+    border-image:
+} 
 .image-animation {
     background: blueviolet;
     height: 300px;
