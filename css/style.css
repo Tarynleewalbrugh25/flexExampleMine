@@ -11,12 +11,12 @@
     --awesome:purple;
 }
 .container {
-    margin-block: 20px;
-    --numbOfBlue: 123;
+    margin-block: 10px;
+    --numbOfRed: 123;
     --numbOfOrange: 100;
     --numbOfYellow: 18;
     border-width: 5px 8px;
-    border-image: radial-gradient(120deg, var(--numbOfBlue), var(numbOfOrange), var(numbOfYellow));
+    border-image: radial-gradient(120deg, var(--numbOfRed), var(numbOfOrange), var(numbOfYellow));
 }
 .container :is(#example1,#example2),
 .button-wrapper {
@@ -32,7 +32,7 @@
 }
 .button-wrapper {
     border: 3px solid;
-    border-image: linear-gradient(blue, var(--awesome)) 11 fill;
+    border-image: linear-gradient(black, var(--awesome)) 11 fill;
 }
 .image-animation {
     background: blueviolet;
