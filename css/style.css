@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: pink;
+    --secondary:blue;
+    --awesome:purple;
+}
+.container {
+    margin-block: 20px;
+    --numbOfBlue: 123;
+    --numbOfOrange: 100;
+    --numbOfYellow: 18;
+    border-width: 5px 8px;
+    border-image: radial-gradient(120deg, var(--numbOfBlue), var(numbOfOrange), var(numbOfYellow));
+}
+.container :is(#example1,#example2),
+.button-wrapper {
+    display: flex;
+    gap: .6rem;
+}
+.container :is(#example2) {
+    flex-flow: row wrap;
+}
+.item {
+    display: grid;
+    grid-template-rows: 20rem 1fr auto;
+}
+.button-wrapper {
+    border: 3px solid;
+    border-image: linear-gradient(blue, var(--awesome)) 11 fill;
+}
+.image-animation {
+    background: blueviolet;
+    height: 300px;
+}
+img[alt="Image"]{
+    width: 5rem;
+    aspect-ratio: 1/1;
+    animation: animatelaptop 5s infinite;
+    transition: all .5s;
+}
+@keyframes animatelaptop {
+    from {
+        transform:translateX(0px)
+    }
+    to {
+        transform: translateX(calc(100vw - 100vw)) scale(1, 1) rotateX(123deg);
+    }
+}
